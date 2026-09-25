@@ -143,7 +143,6 @@ uploaded_file = None
 
 # UPLOAD
 
-
 with left_col:
 
     st.subheader("Upload Receipts/Documents")
@@ -205,9 +204,9 @@ with right_col:
 
                 try:
 
-                    # --------------------------
+                
                     # SEND DOCUMENT TO GEMINI
-                    # --------------------------
+                   
 
                     response = Client.models.generate_content(
                         model="gemini-3.6-flash",
@@ -221,9 +220,8 @@ with right_col:
                     )
 
 
-                    # --------------------------
                     # CONVERT AI RESPONSE TO JSON
-                    # --------------------------
+                    
 
                     ai_text = response.text.strip()
 
@@ -290,9 +288,9 @@ with right_col:
                     document_id = document_response.data[0]["id"]
 
 
-                    # --------------------------
+                
                     # SAVE ALL ITEMS
-                    # --------------------------
+                    
 
                     if items:
 
